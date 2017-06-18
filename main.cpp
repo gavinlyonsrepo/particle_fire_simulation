@@ -8,10 +8,11 @@
 
 #include <iostream>
 #include <math.h>
-#include "Screen.h"
 #include <SDL2/SDL.h>
 #include <stdlib.h>
 #include <time.h>
+
+#include "Screen.h"
 #include "Swarm.h"
 
 using namespace std;
@@ -30,8 +31,8 @@ int main()
 
 	while (true) {
           int elapsed = SDL_GetTicks();
-            // Update particles
 
+         // Update particles
 		swarm.update(elapsed);
 
         // Draw particles
