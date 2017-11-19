@@ -8,7 +8,7 @@
 #include "Screen.h"
 
 namespace pfsns {
-
+// constructor for Screen class
 Screen::Screen() :
 		m_window(NULL), m_renderer(NULL), m_texture(NULL), m_buffer(NULL) {
 
@@ -27,8 +27,10 @@ bool Screen::init() {
 		SDL_Quit();
 		return false;
 	}
-
+    //set the renderer and texture
+    //Use this function to create a 2D rendering context for a window.
 	m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_PRESENTVSYNC);
+	//Use this function SDL_CreateTexture to create a texture for a rendering context.
 	m_texture = SDL_CreateTexture(m_renderer, SDL_PIXELFORMAT_RGBA8888,
 			SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HEIGHT);
 
@@ -45,9 +47,11 @@ bool Screen::init() {
 		return false;
 	}
 
+
 	m_buffer1 = new Uint32[SCREEN_WIDTH * SCREEN_HEIGHT];
 	m_buffer2 = new Uint32[SCREEN_WIDTH * SCREEN_HEIGHT];
 
+    //clear the buffers
 	memset(m_buffer1, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 	memset(m_buffer2, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 
@@ -58,17 +62,16 @@ void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
 	if(x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT) {
 		return;
 	}
-
+    //unsigned int 4 bytes 0xXXXXXXXX colour set
 	Uint32 color = 0;
-
-	color += red;
+    //left bitshifting to get colour value eg 0xrrggbbAA Red Green Blue Alpha
 	color <<= 8;
 	color += green;
 	color <<= 8;
 	color += blue;
 	color <<= 8;
 	color += 0xFF;
-// RGBA
+    // putting x y cord into buffer set equal to colour
 	m_buffer1[(y * SCREEN_WIDTH) + x] = color;
 }
 
@@ -78,14 +81,9 @@ void Screen::boxBlur() {
 	m_buffer1 = m_buffer2;
 	m_buffer2 = temp;
 
+    //loop to iterate over all pixels
 	for(int y=0; y<SCREEN_HEIGHT; y++) {
 		for(int x=0; x<SCREEN_WIDTH; x++) {
-
-			/*
-			 * 0 0 0
-			 * 0 1 0
-			 * 0 0 0
-			 */
 
 			int redTotal=0;
 			int greenTotal=0;
@@ -120,9 +118,13 @@ void Screen::boxBlur() {
 }
 
 void Screen::update() {
+    //Use this function to update the given texture rectangle with new pixel data.
     SDL_UpdateTexture(m_texture, NULL, m_buffer1, SCREEN_WIDTH * sizeof(Uint32));
+	//Use this function to clear the current rendering target with the drawing color.
 	SDL_RenderClear(m_renderer);
+    //Use this function to copy a portion of the texture to the current rendering target.
 	SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);
+	//Use this function to update the screen with any rendering performed since the previous call.
 	SDL_RenderPresent(m_renderer);
 
 }

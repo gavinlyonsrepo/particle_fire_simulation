@@ -13,10 +13,12 @@ namespace pfsns {
 
 class Swarm {
 public:
+	// number of particles
 	const static int NPARTICLES = 5000;
 
 private:
 	Particle * m_pParticles;
+	//last time simulation ran
 		int lastTime;
 
 public:

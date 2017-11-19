@@ -26,6 +26,7 @@ private:
 	Uint32 *m_buffer2;
 
 public:
+    //methods
 	Screen();
 	bool init();
     void update();

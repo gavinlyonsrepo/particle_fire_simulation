@@ -20,6 +20,7 @@ private:
 	void init();
 
 public:
+	//methods
 	Particle();
     void update(int interval);
 	virtual ~Particle();

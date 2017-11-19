@@ -5,12 +5,17 @@
  *  Author: Gavin Lyons
  */
 
-#include "Particle.h"
+
 #include <math.h>
 #include <stdlib.h>
 
+//mine
+#include "Particle.h"
+
+
 namespace pfsns {
 
+//constructor
 Particle::Particle() :
 		m_x(0), m_y(0) {
 
@@ -26,14 +31,14 @@ void Particle::init() {
 	m_speed *= m_speed;
 }
 
-
+//destructor
 Particle::~Particle() {
-	// TODO Auto-generated destructor stub
+	// TODO Auto-generated  stub
 }
 
 
 void Particle::update(int interval) {
-
+    // change positions and speeds of particles
     m_direction += interval * 0.0003;
 
 	double xspeed = m_speed * cos(m_direction);

@@ -18,14 +18,17 @@ Table of contents
 
 Installation
 ------------------
-For local install on Linux PC 
-Download release
-cd into
-run make on makefile
+For local install on Linux based OS 
+
+* Download latest release
+* extract
+* cd into same path as Makefile
+* run make command on makefile
+* copy exe pfsim to where you want it
 
 Usage
 -----------------
-change to .bin type in terminal
+Type in terminal at path where pfsim is placed.
 
 ```sh
 ./pfsim 
@@ -38,3 +41,7 @@ Dependencies
 [SDL2](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)
 
 A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard 
+
+Credits
+--------------------
+John Purcell & Richard Elkins
