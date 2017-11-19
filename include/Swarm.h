@@ -1,15 +1,15 @@
 #ifndef SWARM_H
 #define SWARM_H
 /*
- * Swarm.h
- *
- *  Created on: 13 Sep 2014
- *      Author: johnwpurcell
+ *  Name: Swarm.h @ particle_fire_simulation project pfsim
+ *  Description: library header file
+ *  Created on: 05-05-17
+ *  Author: Gavin Lyons
  */
 
 #include "Particle.h"
 
-namespace caveofprogramming {
+namespace pfsns {
 
 class Swarm {
 public:
@@ -26,7 +26,7 @@ public:
 	const Particle * const getParticles() { return m_pParticles; };
 };
 
-} /* namespace caveofprogramming */
+} /* namespace pfsns */
 
 
 

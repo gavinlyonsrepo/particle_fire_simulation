@@ -1,22 +1,23 @@
 //============================================================================
-// Name        : particle_fire_simulation.cpp
+// Name        : main.cpp @ particle_fire_simulation project pfsim
 // Author      : Gavin Lyons
-// Version     :
+// Version     : 1.0-1
 // Copyright   : GPL
-// Description : SDL particle fire simulation
+// Description : Graphic animation particle fire simulation created using SDL
+// Date        : 05-05-17
 //============================================================================
-
 #include <iostream>
 #include <math.h>
 #include <SDL2/SDL.h>
 #include <stdlib.h>
 #include <time.h>
 
+//mine
 #include "Screen.h"
 #include "Swarm.h"
 
 using namespace std;
-using namespace caveofprogramming;
+using namespace pfsns;
 
 int main()
 {

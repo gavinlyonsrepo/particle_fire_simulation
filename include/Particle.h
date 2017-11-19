@@ -1,12 +1,13 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
 /*
- * Particle.h
- *
- *  Created on: 13 Sep 2014
- *      Author: johnwpurcell
+ *  Name: Particle.h @ particle_fire_simulation project pfsim
+ *  Description: library header file
+ *  Created on: 05-05-17
+ *  Author: Gavin Lyons
  */
-namespace caveofprogramming {
+
+namespace pfsns {
 
 struct Particle {
 	double m_x;
@@ -24,6 +25,6 @@ public:
 	virtual ~Particle();
 };
 
-} /* namespace caveofprogramming */
+} /* namespace pfsns */
 
 #endif // PARTICLE_H

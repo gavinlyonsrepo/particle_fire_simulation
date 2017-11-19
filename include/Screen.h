@@ -1,8 +1,8 @@
 /*
- * Screen.h
- *
- *  Created on: 1 Sep 2014
- *      Author: johnwpurcell
+ *  Name: Screen.h @ particle_fire_simulation project pfsim
+ *  Description: library header file
+ *  Created on: 05-05-17
+ *  Author: Gavin Lyons
  */
 
 #ifndef SCREEN_H
@@ -10,7 +10,7 @@
 
 #include <SDL2/SDL.h>
 
-namespace caveofprogramming {
+namespace pfsns {
 
 class Screen {
 public:
@@ -36,6 +36,6 @@ public:
     void boxBlur();
 };
 
-} /* namespace caveofprogramming */
+} /* namespace pfsns */
 
 #endif /* SCREEN_H_ */

@@ -1,15 +1,15 @@
 /*
- * Particle.cpp
- *
- *  Created on: 13 Sep 2014
- *      Author: johnwpurcell
+ *  Name: Particle.cpp @ particle_fire_simulation project pfsim
+ *  Description: library source file to control the individual particle on screen
+ *  Created on: 05-05-17
+ *  Author: Gavin Lyons
  */
 
 #include "Particle.h"
 #include <math.h>
 #include <stdlib.h>
 
-namespace caveofprogramming {
+namespace pfsns {
 
 Particle::Particle() :
 		m_x(0), m_y(0) {
@@ -51,4 +51,4 @@ void Particle::update(int interval) {
 	}
 
 }
-} /* namespace caveofprogramming */
+} /* namespace pfsns */

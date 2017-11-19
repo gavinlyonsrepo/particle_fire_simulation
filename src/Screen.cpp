@@ -1,13 +1,13 @@
 /*
- * Screen.cpp
- *
- *  Created on: 1 Sep 2014
- *      Author: johnwpurcell
+ *  Name: Screen.cpp @ particle_fire_simulation project pfsim
+ *  Description: library source file to control screen graphic
+ *  Created on: 05-05-17
+ *  Author: Gavin Lyons
  */
 
 #include "Screen.h"
 
-namespace caveofprogramming {
+namespace pfsns {
 
 Screen::Screen() :
 		m_window(NULL), m_renderer(NULL), m_texture(NULL), m_buffer(NULL) {
@@ -137,10 +137,10 @@ bool Screen::processEvents() {
 	}
 	return true;
 }
+
 void Screen::clear() {
 	memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 }
-
 
 
 void Screen::close() {
@@ -152,4 +152,4 @@ void Screen::close() {
 	SDL_Quit();
 }
 
-} /* namespace caveofprogramming */
+} /* namespace pfsns */

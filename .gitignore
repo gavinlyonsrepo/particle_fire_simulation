@@ -1,0 +1,6 @@
+*.depend
+*.layout
+*.cbp
+bin
+obj
+lib_finder.script
