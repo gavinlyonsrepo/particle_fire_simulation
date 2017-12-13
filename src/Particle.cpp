@@ -36,9 +36,9 @@ Particle::~Particle() {
 	// TODO Auto-generated  stub
 }
 
-
+ // change positions and speeds of particles
 void Particle::update(int interval) {
-    // change positions and speeds of particles
+   //give particles a curl
     m_direction += interval * 0.0003;
 
 	double xspeed = m_speed * cos(m_direction);

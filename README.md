@@ -15,6 +15,7 @@ Table of contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Dependencies](#dependencies)
+  * [Credits](#credits)
 
 Installation
 ------------------
@@ -25,6 +26,7 @@ For local install on Linux based OS
 * cd into same path as Makefile
 * run make command on makefile
 * copy exe pfsim to where you want it
+
 
 Usage
 -----------------
@@ -41,6 +43,7 @@ Dependencies
 [SDL2](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)
 
 A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard 
+
 
 Credits
 --------------------
