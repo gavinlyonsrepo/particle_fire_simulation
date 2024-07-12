@@ -1,6 +1,5 @@
-*.depend
-*.layout
-*.cbp
-obj
-bin/pfsim
-lib_finder.script
+bin/
+build/
+Bin/
+BUILD/
+stuff/

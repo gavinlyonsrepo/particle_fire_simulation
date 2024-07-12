@@ -1,10 +1,8 @@
 #ifndef SWARM_H
 #define SWARM_H
 /*
- *  Name: Swarm.h @ particle_fire_simulation project pfsim
- *  Description: library header file
- *  Created on: 05-05-17
- *  Author: Gavin Lyons
+ *  @file Swarm.h @ particle_fire_simulation project pfsim
+ *  @brief library header file
  */
 
 #include "Particle.h"
@@ -14,7 +12,7 @@ namespace pfsns {
 class Swarm {
 public:
 	// number of particles
-	const static int NPARTICLES = 5000;
+	int NPARTICLES;
 
 private:
 	Particle * m_pParticles;
@@ -22,9 +20,9 @@ private:
 		int lastTime;
 
 public:
-	Swarm();
+	Swarm(int nParticles);
 	virtual ~Swarm();
-    void update(int elasped);
+	void update(int elasped);
 	const Particle * const getParticles() { return m_pParticles; };
 };
 

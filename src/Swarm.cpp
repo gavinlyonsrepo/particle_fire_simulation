@@ -1,8 +1,6 @@
 /*
- *  Name: Swarm.cpp @ particle_fire_simulation project pfsim
- *  Description: library source file to control the swarm of particles on screen
- *  Created on: 05-05-17
- *  Author: Gavin Lyons
+ *  @file Swarm.cpp @ particle_fire_simulation project pfsim
+ *  @brief library source file to control the swarm of particles on screen
  */
 
 #include "Swarm.h"
@@ -10,7 +8,8 @@
 namespace pfsns {
 
 // constructor
-Swarm::Swarm(): lastTime(0) {
+Swarm::Swarm(int nparticles): lastTime(0) {
+	NPARTICLES = nparticles;
 	m_pParticles = new Particle[NPARTICLES];
 
 }

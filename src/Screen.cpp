@@ -1,8 +1,8 @@
 /*
- *  Name: Screen.cpp @ particle_fire_simulation project pfsim
- *  Description: library source file to control screen graphic
- *  Created on: 05-05-17
- *  Author: Gavin Lyons
+ *  @file Screen.cpp @ particle_fire_simulation project pfsim
+ *  @brief library source file to control screen graphic
+ 
+ *  
  */
 
 #include "Screen.h"
@@ -65,6 +65,7 @@ void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
     //unsigned int 4 bytes 0xXXXXXXXX colour set
 	Uint32 color = 0;
     //left bitshifting to get colour value eg 0xrrggbbAA Red Green Blue Alpha
+	color = red;
 	color <<= 8;
 	color += green;
 	color <<= 8;

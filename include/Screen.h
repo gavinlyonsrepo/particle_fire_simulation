@@ -1,8 +1,6 @@
 /*
- *  Name: Screen.h @ particle_fire_simulation project pfsim
- *  Description: library header file
- *  Created on: 05-05-17
- *  Author: Gavin Lyons
+ *  @file Screen.h @ particle_fire_simulation project pfsim
+ *  @brief library header file
  */
 
 #ifndef SCREEN_H
@@ -14,8 +12,8 @@ namespace pfsns {
 
 class Screen {
 public:
-	const static int SCREEN_WIDTH = 800;
-	const static int SCREEN_HEIGHT = 600;
+	int SCREEN_WIDTH;
+	int SCREEN_HEIGHT;
 
 private:
 	SDL_Window *m_window;
@@ -26,15 +24,16 @@ private:
 	Uint32 *m_buffer2;
 
 public:
-    //methods
+	//methods
 	Screen();
 	bool init();
-    void update();
+	void update();
 	void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 	bool processEvents();
 	void close();
-    void clear();
-    void boxBlur();
+	void clear();
+	void boxBlur();
+
 };
 
 } /* namespace pfsns */

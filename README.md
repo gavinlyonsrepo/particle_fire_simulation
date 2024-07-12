@@ -1,30 +1,39 @@
 
 Overview
 --------------------------------------------
-* Name: particle_fire_simulation 
 * Title: particle fire simulation
-* Description: particle fire simulation C++ graphics program. 
+* Description : particle fire simulation C++ graphics program. 
 The program creates a SDL API driven graphic display in a window.
-* Author: Gavin Lyons
-* Credits: John Purcell & Richard Elkins
+
 
 Installation
-------------------
+-----------------------------------------------
 For local install on Linux based OS 
 
-* Download latest release
-* extract
-* cd into same path as Makefile
-* run make command on makefile
-* copy exe pfsim to where you want it
+* Download github directory
+* extract tarball
+* 'cd' into same path as Makefile
+* run 'make'  to build
+* Exe file made at ./Bin/pfsim 
+* run 'make help' for all options. 
 
 Usage
------------------
-Type in terminal at path where pfsim is placed.
+------------------------------------------
 
-```sh
-./pfsim 
 ```
+pfsim  [arguments]
+pfsim 800 600 7 5000 1000
+```
+
+Arguments list
+
+| Number | Name | Default value | Notes  | 
+| -------- | ----------- | ----------- | ----------- |
+| 1 | width Resolution | 800 | width of SDL window | 
+| 2 | height Resolution| 600 | height of SDL window | 
+| 3 | number Of Particles |  5000 |  | 
+| 4 | RGB bits | 7 | 1 - 6 to turn off red green or blue color , b100 = Red only | 
+| 5 | Number of loop counts | 1000 |  
 
 Dependencies
 --------------------

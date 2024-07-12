@@ -1,8 +1,7 @@
 /*
- *  Name: Particle.cpp @ particle_fire_simulation project pfsim
- *  Description: library source file to control the individual particle on screen
- *  Created on: 05-05-17
- *  Author: Gavin Lyons
+ *  @file Particle.cpp @ particle_fire_simulation project pfsim
+ *  @brief library source file to control the individual particle on screen
+ 
  */
 
 
