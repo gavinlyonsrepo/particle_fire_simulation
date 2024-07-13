@@ -22,7 +22,7 @@ Usage
 
 ```
 pfsim  [arguments]
-pfsim 800 600 7 5000 1000
+pfsim 800 600 5000 7 1000
 ```
 
 Arguments list
